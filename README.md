@@ -5,4 +5,4 @@ This is simple project is part of my Odin Project curriculum (www.theodinproject
 
 I am also trying to come to terms with the wierd & wonderful world of GitHub!  
 
-Next I have made a change to a clone of the file from my computer, then created a pull request via the command line.
+Next I have made a change to a clone of the file from my computer, then updated the GitHub file directly via the command line.
