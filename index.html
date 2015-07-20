@@ -6,61 +6,61 @@
 	</script>
 
 	<script>
-			$(document).ready(function(){  
-			//input jquery here:
+		$(document).ready(function() {
+	  //input jquery here:
 
-$("button").css("padding", "10px");
-$("button").click(function(){
-    //remove current grid
-    $("table").empty();
-    
-    var colNum = prompt("How many columns do you want?");
-var rowNum = prompt("How many rows do you want?");
+	  $("button").css("padding", "10px");
+	  $("button").click(function() {
+	    //remove current grid
+	    $("table").empty();
 
+	    //Ask user for the number of columns and rows
+	    var colNum = prompt("How many columns do you want?");
+	    var rowNum = prompt("How many rows do you want?");
 
+	    //create string "colNum_string"
+	    //it will begin with <tr> and end with </tr>
+	    //each loop will add a new column <td></td>
+	    var colNum_string = "<tr>";
+	    for (var i = 0; i < colNum; i++) {
+	      colNum_string += "<td></td>";
+	    };
+	    colNum_string += "</tr>";
 
-//create string "colNum_string"
-//it will begin with <tr> and end with </tr>
-//each loop will add a new column <td></td>
-var colNum_string = "<tr>";
-for (var i = 0; i < colNum; i++) {    
-    colNum_string += "<td></td>";
-};
-colNum_string += "</tr>";
-
-//create table
-for (var j = 0; j < rowNum; j++) {
-    $("table").append(colNum_string);
-};
-
-//css to set height, width
-$("td").css("width", "5px");
-$("td").css("height", "5px");
-
-//css sorts out the borders between the cells
-$("td").css("border", "none");
-$("td").css("border-collapse", "collapse");
-$("table").css("border", "black solid 1px");
-$("table").css("border-collapse", "collapse");
-
-//mouse enter...
-$("td").mouseenter(function(){
-    $(this).css("background-color", "black");
-});
-
-});
+	    //create table
+	    for (var j = 0; j < rowNum; j++) {
+	      $("table").append(colNum_string);
+	    };
 
 
-		});
-	</script>
+	    //css to set height, width
+	    $("td").css("width", "5px");
+	    $("td").css("height", "5px");
+
+	    //css sorts out the borders between the cells
+	    $("td").css("border", "none");
+	    $("td").css("border-collapse", "collapse");
+	    $("table").css("border", "black solid 1px");
+	    $("table").css("border-collapse", "collapse");
+
+	    //mouse enters a div, the background colour
+	    //will be changed to black
+	    $("td").mouseenter(function() {
+	      $(this).css("background-color", "black");
+	    });
+
+	  });
+
+	});
+</script>
 </head>
 
 
 
 <body>
 
-<button>New Grid</button>
-<table width="960px" height="960px"></table>
+	<button>New Grid</button>
+	<table width="960px" height="960px"></table>
 
 </body>
 
